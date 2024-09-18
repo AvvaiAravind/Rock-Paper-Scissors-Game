@@ -5,7 +5,7 @@ function getComputerChoice() {
   let computerChoice = Math.floor(Math.random() * 3);
   computerChoice =
     computerChoice === 0 ? "rock" : computerChoice === 1 ? "paper" : "scissors";
-  console.log(computerChoice);
+  console.log("Comp :", computerChoice);
   return computerChoice;
 }
 
@@ -19,31 +19,34 @@ function getHumanChoice() {
     alert("Please enter a valid option");
     getHumanChoice();
   }
-  console.log(humanChoice);
+  console.log("Human", humanChoice);
   return humanChoice;
 }
 
 function playRound(humanChoice, computerChoice) {
   let humanScore = 0;
   let computerScore = 0;
-  let ound = 0;
-  humanChoice = humanChoice.toLowerCase();
-  if (humanChoice === computerChoice) {
-    return "This is a tie game";
-  } else if (
-    (humanChoice === "rock" && computerChoice === "scissors") ||
-    (humanChoice === "paper" && computerChoice === "rock") ||
-    (humanChoice === "scissors" && computerChoice === "paper")
-  ) {
-    return "You won the game";
-    humanScore++;
-    console.log(humanScore);
-  } else {
-    return "Computer won the game";
-    computerScore++;
-    console.log(computerScore);
+
+  for (let i = 0; i <= 5; i++) {
+    humanChoice = humanChoice.toLowerCase();
+    if (humanChoice === computerChoice) {
+      return "This is a tie game";
+    } else if (
+      (humanChoice === "rock" && computerChoice === "scissors") ||
+      (humanChoice === "paper" && computerChoice === "rock") ||
+      (humanChoice === "scissors" && computerChoice === "paper")
+    ) {
+      humanScore++;
+      i++;
+      console.log(humanScore);
+      return "You won the game";
+    } else {
+      computerScore++;
+      i++;
+      console.log(computerScore);
+      return "Computer won the game";
+    }
   }
-  round++;
 }
 
 console.log(playRound(getHumanChoice(), getComputerChoice()));
