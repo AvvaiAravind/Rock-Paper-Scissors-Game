@@ -18,7 +18,7 @@ const validateHumanChoice = (humanChoice) => {
     return humanChoice;
   } else if (humanChoice === "") {
     alert("You didn't choose valid option");
-    validateHumanChoice(getHumanChoice());
+    return validateHumanChoice(getHumanChoice());
   } else {
     humanChoice = humanChoice.toLowerCase();
     if (
@@ -29,7 +29,7 @@ const validateHumanChoice = (humanChoice) => {
       return humanChoice;
     } else {
       alert("You didn't choose valid option");
-      validateHumanChoice(getHumanChoice());
+      return validateHumanChoice(getHumanChoice());
     }
   }
 };
