@@ -4,7 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="game.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header class="winner-display">
+      <h1 class="Round">Round : <span id="round-count">0</span></h1>
+      <button class="reset">Reset Game</button>
+      <h3 class="winner"></h3>
+    </header>
+    <main>
+      <section class="player-section">
+        <h4 class="player-choice">
+          You chose : <span id="user-choice"></span>
+        </h4>
+        <h4 class="player-score">Score : <span id="user-score">0</span></h4>
+        <figure id="player-section">
+          <p class="rock" id="rock">🪨</p>
+          <p class="paper" id="paper">📜</p>
+          <p class="scissors" id="scissors">✂️</p>
+        </figure>
+      </section>
+      <section class="computer-section">
+        <h4 class="computer-choice">
+          Computer chose : <span id="computer-dchoice"></span>
+        </h4>
+        <h4 class="computer-score">
+          Score : <span id="computer-score">0</span>
+        </h4>
+        <figure id="computer-section">
+          <p class="C-rock " id="C-rock">🪨</p>
+          <p class="C-paper " id="C-paper">📜</p>
+          <p class="C-scissors " id="C-scissors">✂️</p>
+        </figure>
+      </section>
+    </main>
+  </body>
 </html>

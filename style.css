@@ -1,0 +1,89 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color2: #9198e5;
+  --bg-color1: #e66465;
+  --lt-color: whitesmoke;
+  --dark-color: rgba(10, 9, 9, 0.126);
+}
+
+.display {
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+button {
+  font: inherit;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-color1),
+    var(--bg-color2)
+  );
+}
+
+body {
+  margin: 0 auto;
+  max-width: 600px;
+  min-height: 100vh;
+  background-color: var(--lt-color);
+  text-align: center;
+}
+
+header {
+  margin: 0 10px 10px 10px;
+  padding: 10px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+figure {
+  display: flex;
+  gap: 10px;
+  border: 2px solid var(--dark-color);
+  max-width: 300px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+figure p {
+  font-size: 60px;
+}
+
+figure P:hover {
+  font-size: 65px;
+  cursor: pointer;
+}
+
+section {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+h4,
+button {
+  padding: 5px;
+}
+
+h3 {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.add-hover {
+  font-size: 65px;
+}
